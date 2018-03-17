@@ -1,0 +1,20 @@
+{
+  "name": "api-travel-notes",
+  "version": "1.0.0",
+  "description": "wiki",
+  "title": "Egg-Web Api",
+  "url" : "",
+  "sampleUrl": "http://api.yannis.xin",
+  "header": {
+    "title": "Egg-Web",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "footer",
+    "filename": "footer.md"
+  },
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  }
+}
