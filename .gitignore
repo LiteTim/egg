@@ -57,3 +57,20 @@ typings/
 # dotenv environment variables file
 .env
 
+.autod.conf.js
+.eslintignore
+.eslintrc
+.idea/
+.travis.yml
+apidoc.json
+app.js
+app/
+appveyor.yml
+config/
+Would skip repository egg/
+footer.md
+header.md
+package.json
+run/
+test/
+config/default.js
