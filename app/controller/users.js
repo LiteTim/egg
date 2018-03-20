@@ -87,6 +87,40 @@ class UsersController extends Controller {
     }
 
 
+    /**
+     * @api {get} /v1/users/signin 登录接口
+     * @apiVersion 1.0.0
+     * @apiName 登录
+     * @apiGroup User
+     * @apiPermission none
+     *
+     * @apiDescription Compare Verison 1.0.0
+     *
+     *
+     * @apiExample Example usage:
+     * curl -i http://localhost/user/4711
+     *
+     * @apiParam {Number}   mobile        用户的手机号码
+     * @apiParam {String}   password      用户的登录密码
+     * @apiParam {String}   platform      平台（mobile）(可选参数， 放在请求头里面)
+     *
+     * @apiError UserNotFound   该用户不存在
+     *
+     * @apiErrorExample Response (example):
+     *     HTTP/1.1 401 Not Authenticated
+     *     {
+     *       "error": "UserNotFound"
+     *     }
+     * @apiSuccessExample Response (example):
+     *     HTTP/1.1 200
+     *     {
+     *          "state": 200,
+     *          "msg": "sign in success",
+     *          "sessionToken":"xxxxxx"
+     *     }
+     *
+     */
+
     async login() {
         console.log('login');
     }
