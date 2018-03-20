@@ -35,6 +35,39 @@ const updateRule = {
 class UsersController extends Controller {
 
 
+    /**
+     * @api {get} v1/users/user/:id 查询用户信息
+     * @apiVersion 1.0.0
+     * @apiName 获取用户信息
+     * @apiGroup User
+     * @apiPermission none
+     *
+     * @apiDescription Compare Verison 1.0.0
+     *
+     * @apiParam {Number}  id 用户ID
+     *
+     * @apiExample Example usage:
+     * curl -i http://localhost/user/4711
+     *
+     * @apiSuccess {Number}   id            用户ID
+     * @apiSuccess {Date}     registered    注册时间
+     * @apiSuccess {Date}     name          用户名称
+     * @apiSuccess {Object}   profile       用户简介
+     * @apiSuccess {Number}   profile.age   年龄
+     * @apiSuccess {String}   profile.image 头像地址
+     * @apiSuccess {Object[]} options       空
+     * @apiSuccess {String}   options.name  Option Name.
+     * @apiSuccess {String}   options.value Option Value.
+     *
+     * @apiError NoAccessRight 没有认证登录
+     * @apiError UserNotFound   该用户不存在
+     *
+     * @apiErrorExample Response (example):
+     *     HTTP/1.1 401 Not Authenticated
+     *     {
+ *       "error": "NoAccessRight"
+ *     }
+     */
     async index() {
 
         console.log(!this.ctx.isAuthenticated(), !this.ctx.user);
