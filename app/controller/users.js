@@ -59,14 +59,13 @@ class UsersController extends Controller {
      * @apiSuccess {String}   options.name  Option Name.
      * @apiSuccess {String}   options.value Option Value.
      *
-     * @apiError NoAccessRight 没有认证登录
      * @apiError UserNotFound   该用户不存在
      *
      * @apiErrorExample Response (example):
-     *     HTTP/1.1 401 Not Authenticated
+     *     HTTP/1.1 404 Not found
      *     {
- *       "error": "NoAccessRight"
- *     }
+     *       "error": "Not found"
+     *     }
      */
     async index() {
 
