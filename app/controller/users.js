@@ -126,17 +126,14 @@ class UsersController extends Controller {
 
     async update() {
 
-        // console.log('params update', this.ctx.isAuthenticated(), this.ctx.user);
 
         if (!this.ctx.isAuthenticated()) {
-            // this.ctx.redirect('/api/v1/login');
             this.ctx.throw(401, "Unauthorized");
             return;
         }
 
         this.ctx.validate(updateRule);
         let user = await this.ctx.service.user.update({id: this.ctx.user.id, updates: this.ctx.request.body});
-        // console.log('user:', user);
         this.ctx.status = 200;
         this.ctx.body = {
             success: 'success'
