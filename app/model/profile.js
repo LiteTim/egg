@@ -3,8 +3,6 @@
 module.exports = app => {
     const {STRING, INTEGER, DATE, BOOLEAN} = app.Sequelize;
 
-    console.log('define table profile');
-    console.log(app.model.define);
 
     const Profile = app.model.define('profile', {
         id: {
@@ -33,9 +31,6 @@ module.exports = app => {
         updated_at: DATE,
     });
 
-    // User.prototype.associate = function () {
-    //     app.model.User.hasMany(app.model.Post, {as: 'posts', foreignKey: 'user_id'});
-    // };
 
     return Profile;
 };
