@@ -13,7 +13,6 @@ class StorageController extends Controller {
         }
         let ctx = this.ctx;
 
-        // console.log('user_id',ctx.user);
         let response = await new Promise(function (full, error) {
             // 构建一个 Aliyun Client, 用于发起请求
             // 构建Aliyun Client时需要设置AccessKeyId和AccessKeySevcret
